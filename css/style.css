@@ -101,12 +101,11 @@ span{user-select: none;}
     font-size:24px;
 }
 .leftWrap .textBox a:hover{
-    background:#222;
-    border-color: #222;
     transform: translateY(-5px);
+    background:#FDB504;
 }
-.leftWrap .textBox a:hover i{
-    color: #FDB504;
+.leftWrap .textBox img{
+    transform: translate(3px, -3px);
 }
 
 .leftWrap footer{

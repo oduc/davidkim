@@ -1,0 +1,206 @@
+@charset 'utf-8';
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Work+Sans&display=swap');
+
+*{margin:0; padding:0;}
+a{text-decoration: none; color:inherit}
+ol, ul{list-style: none;}
+img{vertical-align: top;}
+body{
+    box-sizing: border-box; 
+    color:#222; 
+    font-family: 'Work Sans';
+    overflow-x: hidden;
+}
+p{user-select: none;}
+
+.cf:after{display: block; clear: both; content: '';}
+/* 초기화----------------------------------------- */
+.textPoint{color:#FDB504}
+
+
+
+/* .main------------------------------------------- */
+.main{
+    display: table;
+    width:100%;
+    height:100vh;
+}
+
+
+/* .mainL---------------------------------------- */
+.mainL{
+    display: table-cell;
+    width:30%;
+    height: 100vh;
+    position: fixed;
+    top:0;
+    left:0;
+    overflow: hidden;
+}
+
+.mainL video{
+    position: absolute;
+    left:50%;
+    transform: translateX(-50%);
+    height:100vh;
+    animation: videoOpacity 0.7s 9.2s ease-in-out forwards normal;
+}
+@keyframes videoOpacity{
+    0%{opacity: 1;}
+    100%{opacity: 0;}
+}
+
+.leftWrap{
+    width: 300px;
+    height:calc(100vh - 70px);
+    position: absolute;
+    right:0;
+    top:70px;
+    text-align: right;
+
+}
+.leftWrap>img{
+    height: 200px;
+    transition: all 0.5s;
+}
+.leftWrap>img:hover{
+    opacity: 0.7;
+}
+.leftWrap .textBox{
+    position: absolute;
+    right:0;
+    margin-top:60px;
+    width: 200px;
+    padding-top:15px;
+    padding-bottom:15px;
+    text-align: center;
+    border-top:1px dotted #999;
+    border-bottom:1px dotted #999;
+}
+
+.leftWrap footer{
+    width:200px;
+    position: absolute;
+    right:0;
+    bottom:10px;
+    font-size: 10px;
+    text-align: center;
+    padding-left:10px;
+    padding-right:10px;
+}
+
+
+/* .mainR----------------------------------------- */
+.mainR{
+    display: table-cell;
+    width: 70%;
+    background: #f2f2ee;
+    padding-top:70px;
+}
+.rightWrap{
+    width: 900px;
+}
+/* .rightWrap .imgBox */
+.rightWrap .imgBox{
+    position: relative;
+}
+.rightWrap .imgBox:before{
+    display: block;
+    content: '';
+    width:0;
+    height: 3px;
+    background:#FDB504;
+    position: absolute;
+    top:-15px;
+    animation: imgBoxLine 1.7s 0.2s ease-in-out forwards normal;
+}
+@keyframes imgBoxLine{
+    0%{width:0;}
+    100%{width:30%}
+}
+
+.rightWrap .imgBox img{
+    height: 200px;
+    transition: all 0.5s;
+}
+.rightWrap .imgBox img:hover{
+    opacity: 0.7;
+}
+
+
+/* section 공통영역-------------------------- */
+section{
+    margin-top:120px;
+    width:500px;
+    display: table;
+}
+
+section:nth-child(even){
+    padding-left:50px;
+    float: left;
+}
+section:nth-child(odd){
+    float: right;
+    margin-right:50px;
+}
+
+section .textBox{
+    margin-top:20px;
+}
+section .textBox p{
+    display: table-cell;
+}
+section .textBox h2{
+    display: table-cell;
+    font-family: 'Abril Fatface';
+    font-weight: normal;
+    text-align: left;
+    font-size:36px;
+    line-height: 1.1;
+}
+
+
+/* .section02------------------------------------ */
+.section02 .textBox h2{
+    font-size:32px;
+}
+.section02 .textBox P{
+    padding-left:10px;
+}
+
+
+/* .section04----------------------------------- */
+.section04 .textBox, .section06 .textBox{
+    display: table;
+}
+
+.section04 .textBox li, .section06 .textBox li{
+    display: table;
+    margin-top:10px;
+}
+.section04 .textBox li p:first-child, .section06 .textBox li p:first-child{
+    border-right:1px solid #FDB504;
+    width: 5em;
+}
+.section04 .textBox li p:last-child, .section06 .textBox li p:last-child{
+    padding-left:10px;
+}
+
+
+/* .setion06---------------------------------------- */
+.section06 .textBox h2{
+    padding-right:20px;
+}
+
+
+/* .section07-------------------------------------- */
+.section07{
+    padding-bottom:100px;
+}
+.section07 img{
+    animation: imgGray 2.3s linear infinite alternate;
+}
+@keyframes imgGray{
+    0%{filter: grayscale(0);}
+    100%{filter: grayscale(1);}
+}

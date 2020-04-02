@@ -10,6 +10,7 @@ body{
     color:#222; 
     font-family: 'Work Sans';
     overflow-x: hidden;
+    background:#f2f2ee;
 }
 p{user-select: none;}
 h2{user-select: none;}
@@ -38,6 +39,7 @@ span{user-select: none;}
     top:0;
     left:0;
     overflow: hidden;
+    background:#fff;
 }
 
 .mainL video{
